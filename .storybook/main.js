@@ -5,7 +5,9 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    '@storybook/preset-create-react-app'
+    '@storybook/preset-create-react-app',
+    'storybook-tailwind-dark-mode',
+    '@storybook/addon-google-analytics'
   ],
   framework: '@storybook/react',
   core: {
