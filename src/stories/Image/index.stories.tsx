@@ -2,7 +2,7 @@ import Component from '.'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-  title: 'Feedback/Alert',
+  title: 'Data Display/Image',
   component: Component
 } as ComponentMeta<typeof Component>
 

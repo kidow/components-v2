@@ -2,10 +2,10 @@ import Component from '.'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-  title: 'Feedback/Alert',
+  title: 'Inputs/Button',
   component: Component
 } as ComponentMeta<typeof Component>
 
-export const Default: ComponentStory<typeof Component> = ({ ...props }) => (
+export const Group: ComponentStory<typeof Component> = ({ ...props }) => (
   <Component {...props} />
 )
