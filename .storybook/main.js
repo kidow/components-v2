@@ -7,7 +7,15 @@ module.exports = {
     '@storybook/addon-interactions',
     '@storybook/preset-create-react-app',
     'storybook-tailwind-dark-mode',
-    '@storybook/addon-google-analytics'
+    '@storybook/addon-google-analytics',
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss')
+        }
+      }
+    }
   ],
   framework: '@storybook/react',
   core: {

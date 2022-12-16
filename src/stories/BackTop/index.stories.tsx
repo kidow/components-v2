@@ -7,5 +7,12 @@ export default {
 } as ComponentMeta<typeof Component>
 
 export const Default: ComponentStory<typeof Component> = ({ ...props }) => (
-  <Component {...props} />
+  <>
+    <div>
+      {Array.from({ length: 50 }, (_, key) => (
+        <h1 key={key}>{`Heading ${key + 1}`}</h1>
+      ))}
+    </div>
+    <Component {...props} />
+  </>
 )

@@ -3,9 +3,29 @@ import type { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
   title: 'Navigation/Tabs',
-  component: Component
+  component: Component,
+  argTypes: {
+    list: {
+      control: { type: 'object' },
+      defaultValue: ['전체', '상품', '회원', '주문']
+    },
+    value: {
+      control: { type: 'number' },
+      defaultValue: 0
+    },
+    onChange: {
+      action: 'onChange'
+    },
+    size: {
+      control: { type: 'radio' },
+      options: ['xs', 'sm', 'md', 'lg'],
+      defaultValue: 'md'
+    }
+  }
 } as ComponentMeta<typeof Component>
 
 export const Default: ComponentStory<typeof Component> = ({ ...props }) => (
-  <Component {...props} />
+  <div className="border-b px-6">
+    <Component {...props} />
+  </div>
 )
