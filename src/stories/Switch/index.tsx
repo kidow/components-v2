@@ -5,9 +5,15 @@ export interface Props {
   checked: boolean
   onChange: (checked: boolean) => void
   size?: 'sm' | 'md' | 'lg'
+  disabled?: boolean
 }
 
-const Switch: FC<Props> = ({ checked, onChange, size = 'md' }) => {
+const Switch: FC<Props> = ({
+  checked,
+  onChange,
+  size = 'md',
+  disabled = false
+}) => {
   return (
     <label
       className={classnames('relative inline-block', {
@@ -19,14 +25,18 @@ const Switch: FC<Props> = ({ checked, onChange, size = 'md' }) => {
       <input
         type="checkbox"
         checked={checked}
+        disabled={disabled}
         className="h-0 w-0 opacity-0"
         readOnly
       />
       <span
-        onClick={() => onChange(!checked)}
+        onClick={() => {
+          if (!disabled) onChange(!checked)
+        }}
         className={classnames(
-          'absolute inset-0 cursor-pointer transition duration-300 before:absolute before:rounded-full before:bg-white before:transition before:duration-300 before:content-[""]',
+          'absolute inset-0 transition duration-300 before:absolute before:rounded-full before:bg-white before:transition before:duration-300 before:content-[""]',
           checked ? 'bg-blue-600' : 'bg-gray-200',
+          disabled ? 'cursor-not-allowed' : 'cursor-pointer',
           {
             'rounded-lg before:left-1 before:bottom-1 before:h-2 before:w-2':
               size === 'sm',

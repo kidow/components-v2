@@ -16,6 +16,10 @@ export default {
       control: { type: 'radio' },
       options: ['sm', 'md', 'lg'],
       defaultValue: 'md'
+    },
+    disabled: {
+      control: { type: 'boolean' },
+      defaultValue: false
     }
   }
 } as ComponentMeta<typeof Component>
