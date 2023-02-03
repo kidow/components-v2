@@ -97,6 +97,18 @@ module.exports = {
           '100%': {
             transform: 'scaleX(0)'
           }
+        },
+        'fade-up': {
+          from: {
+            opacity: 0,
+            transform: 'translate3d(0, -16px, 0)'
+          },
+          '60%': {
+            opacity: 1
+          },
+          to: {
+            transform: 'none'
+          }
         }
       },
       animation: {
@@ -105,7 +117,8 @@ module.exports = {
         'bounce-in-left': 'bounce-in-left 0.7s linear',
         'bounce-in-up': 'bounce-in-up 0.7s linear',
         'bounce-in-down': 'bounce-in-down 0.7s linear',
-        'toast-progress': 'toast-progress linear 1 forwards'
+        'toast-progress': 'toast-progress linear 1 forwards',
+        'fade-up': 'fade-up 0.2s linear'
       }
     }
   },
