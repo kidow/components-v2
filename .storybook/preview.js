@@ -21,8 +21,7 @@ export const decorators = [
         <div className="animate-bounce rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 py-2 px-4">
           <a
             rel="noreferrer"
-            href="https://kidow.me"
-            target="_blank"
+            href="https://kidow.me/archive/intro"
             className="font-semibold !text-white"
           >
             새 프로젝트로 이전하였습니다. 클릭 시 이동
